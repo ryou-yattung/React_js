@@ -1,7 +1,9 @@
-const Item = ({ note, date, time,deletDate }) => {
+const Item = ({ id, note, date, time,deletDate }) => {
 
      function deletItem(){
-
+          deletDate(function(prev){
+               return prev.filter(item => item.id !== id);
+          })
      }
 
   return (

@@ -8,10 +8,11 @@ const List = ({ listDate, deletDate }) => {
   return (
     <div className="list">
       {listDate.map((item) => {
-        const { note, time, date, id } = item;
+        const { id, note, time, date } = item;
         return (
           <Item
             key={id}
+            id={id}
             note={note}
             time={time}
             date={date}
